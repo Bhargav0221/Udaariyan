@@ -12,7 +12,7 @@ const OtpVerification = () => {
   const email = location.state?.email;
   const handleSendOtp = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/otp/send-otp", {
+      const response = await axios.post("https://udaariyan-backend.onrender.com/otp/send-otp", {
         email
       });
 

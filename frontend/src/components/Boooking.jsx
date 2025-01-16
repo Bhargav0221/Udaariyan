@@ -22,7 +22,7 @@ const Boooking = () => {
     const fetchAllFlights = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("http://localhost:3000/flight");
+        const response = await axios.get("https://udaariyan-backend.onrender.com/flight");
         setFlights(response.data.data);
       } catch (err) {
         setError("Unable to fetch flight data.");
@@ -41,7 +41,7 @@ const Boooking = () => {
       try {
         const query = new URLSearchParams(searchData).toString();
         const response = await axios.get(
-          `http://localhost:3000/flight?${query}`
+          `https://udaariyan-backend.onrender.com/flight?${query}`
         );
         setFlights(response.data.data);
       } catch (err) {

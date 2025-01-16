@@ -21,7 +21,7 @@ const PopularHotels = ({ filters }) => {
         ).toString();
 
         const response = await axios.get(
-          `http://localhost:3000/api/hotels?${query}`
+          `https://udaariyan-backend.onrender.com/api/hotels?${query}`
         );
         if (Array.isArray(response.data)) {
           setHotels(response.data);

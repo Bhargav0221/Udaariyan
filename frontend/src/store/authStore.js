@@ -4,7 +4,7 @@ import { persist } from "zustand/middleware";
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 
-const API_URL = import.meta.env.MODE === "development" ? "http://localhost:3000/api/auth" : "/api/auth";
+const API_URL = "https://udaariyan-backend.onrender.com/api/auth";
 
 axios.defaults.withCredentials = true;
 
@@ -97,7 +97,7 @@ export const useAuthStore = create(persist((set) => ({
 
 		handleVerifyOtp :async (email,otp) => {
 			try {
-				const response = await axios.post('http://localhost:3000/otp/verify-otp', { email, otp });
+				const response = await axios.post('https://udaariyan-backend.onrender.com/otp/verify-otp', { email, otp });
 				console.log(response);
 				if(response.data.success==true){
 					set({

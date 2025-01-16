@@ -15,7 +15,7 @@ const BookingForm = () => {
     const randomBookingId = `BOOK-${Math.floor(100000 + Math.random() * 900000)}`;
 
     try {
-      await axios.post("http://localhost:3000/api/booking/save", {
+      await axios.post("https://udaariyan-backend.onrender.com/api/booking/save", {
         userId: user._id,
         bookingId: randomBookingId,
         totalAmount: totalAmount,
@@ -25,7 +25,7 @@ const BookingForm = () => {
         address: user.address.trim(),
       });
 
-      const response = await axios.post("http://localhost:3000/send/sendbooking", {
+      const response = await axios.post("https://udaariyan-backend.onrender.com/send/sendbooking", {
         email: user.email,
         bookingDetails: {
           name: user.name.trim(),
