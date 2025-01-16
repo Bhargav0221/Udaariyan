@@ -4,6 +4,7 @@
   "description": "",
   "main": "backend/BackendAuth/index.js",
   "scripts": {
+    "start" : "node backend/BackendAuth/index.js",
     "dev": "nodemon backend/BackendAuth/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
